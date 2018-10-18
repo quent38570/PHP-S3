@@ -12,8 +12,7 @@
       <a href="#">Concerts</a>
       <a href="#">Spectacles</a>
       <a href="#">Sports</a>
-      <a href="#">Expositions</a>
-      <a href="#">Loisirs</a>
+      <a href="#">Informations</a>
     </nav>
 <!-- Dernières Minutes -->
     <div>

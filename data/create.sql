@@ -1,9 +1,10 @@
 CREATE TABLE evenements (
   idEvenements INT PRIMARY KEY,
-  nom TEXT,
+  nomEvenements TEXT,
   type TEXT,
   libelle TEXT,
   image TEXT,
+  lieu TEXT REFERENCES lieux(nomLieux),
   moment DATE,
   nbBillet INT,
   prix REAL
@@ -14,6 +15,12 @@ CREATE TABLE utilisateurs (
   identifiants TEXT,
   motDePasse TEXT,
   );
+
+CREATE TABLE lieux (
+  nomLieux TEXT PRIMARY KEY,
+  adresse TEXT,
+  site TEXT
+);
 
 CREATE VIEW panier (idEvenements, idUtilisateurs, nbBilletAcheter)AS
   SELECT idEvenements, idUtilisateurs
