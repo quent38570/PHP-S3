@@ -11,7 +11,9 @@ if ($Identifiant == 0 || $MotDePasse == 0) {
 }
 
 // Traitement des variables
-// TO DO
+            require_once("../model/DAO.class.php");
+            $dao -> construct();
+            if ($dao -> VerifIdMdp($identifiant, $mdpasse)){
 
 // Redirection sur le site en tant que connécté
 
@@ -21,4 +23,4 @@ if ($Identifiant == 0 || $MotDePasse == 0) {
 
     // Redirection sur la bonne page
     require_once("../view/".$page.".view.php");
- ?> 
+ ?>
