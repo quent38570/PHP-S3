@@ -12,15 +12,22 @@ if ($Identifiant == 0 || $MotDePasse == 0) {
 
 // Traitement des variables
             require_once("../model/DAO.class.php");
-            $dao -> construct();
-            if ($dao -> VerifIdMdp($identifiant, $mdpasse)){
+            $dao = new BilletDAO();
+            $result = $dao->RecupIdMdp($Identifiant, $MotDePasse);
+            if (!empty($result)){
+              // Redirection sur le site en tant que connécté
 
-// Redirection sur le site en tant que connécté
+                  // Sauvegarde de la connexion dans la variable globale SESSION
+                  session_start();
+                  $_SESSION['Identifiant'] = $Identifiant;
+                  $_SESSION['MotDePasse'] = $MotDePasse;
+                  $_SESSION['ID'] = $result[0]['idUtilisateur'];
 
-    // Sauvegarde de la connexion dans la variable globale SESSION
-    session_start(['read_and_close' => true]);
-    $_SESSION['Identifiant'] = $Identifiant;
+                  // Redirection sur la bonne page
+                  require_once("../view/".$page.".view.php");
+            }else {
+              echo "Mauvais identifiant ou mot de passe";
+            }
 
-    // Redirection sur la bonne page
-    require_once("../view/".$page.".view.php");
+
  ?>
