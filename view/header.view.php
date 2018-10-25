@@ -18,6 +18,10 @@
 </nav>
 
 <nav>
+  <?php
+  session_start();
+  if(!isset($_SESSION['Identifiant'])){
+   ?>
   <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/connexion.view.php">
   <label for="Connexion"></label>
   <input type="button" id="Connexion" name="Connexion" value="Connexion">
@@ -29,12 +33,13 @@
   </a>
   <br>
   <?php
-require_once("../controler/connexion.ctrl.php");
-session_start();
-  echo($_SESSION['Identifiant']);
+    }  else{
+    echo($_SESSION['Identifiant']);
       ?>
   <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/index.view.php">
   <label for="Deconnexion"></label>
   <input type="button" id="Deconnexion" name="Deconnexion" value="Deconnexion"><br>
   </a>
+  <?php } ?>
+
 </nav>
