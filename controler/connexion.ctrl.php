@@ -25,6 +25,7 @@ if (!empty($_POST['Identifiant']) || !empty($_POST['MotDePasse']) ) {
                   require_once("../view/".$page.".view.php");
             }else {
               require_once("../view/connexion.view.php");
+              echo "Mauvais Mot de Passe";
             }
 }
 

@@ -1,28 +1,28 @@
 
-<?php include 'header.view.html'; ?>
+<?php include 'header.view.php'; ?>
 
 <!-- Dernières Minutes -->
     <div>
       <h3>Dernières Minutes</h3>
-      <img src="" alt="" > <a href="#"></a> </img>
-      <img src="" alt="" > <a href="#"></a> </img>
-      <img src="" alt="" > <a href="#"></a> </img>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
     </div>
 
 <!--A ne pas manquer -->
     <div>
       <h3>A ne pas manquer</h3>
-      <img src="" alt="" > <a href="#"></a> </img>
-      <img src="" alt="" > <a href="#"></a> </img>
-      <img src="" alt="" > <a href="#"></a> </img>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
     </div>
 
 <!--Nouveautés -->
     <div>
       <h3>Nouveautés</h3>
-      <img src="" alt="" > <a href="#"></a> </img>
-      <img src="" alt="" > <a href="#"></a> </img>
-      <img src="" alt="" > <a href="#"></a> </img>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
+      <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/zoom.view.php"><img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="" ></img></a>
     </div>
 
 <?php include 'footer.view.html'; ?>

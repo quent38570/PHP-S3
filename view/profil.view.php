@@ -1,5 +1,9 @@
-<?php include 'header.view.html'; ?>
+<?php include 'header.view.php'; ?>
 
 <!-- TO DO -->
-
-<?php include 'footer.view.html'; ?> 
+<?php
+require_once("../controler/connexion.ctrl.php");
+session_start();
+echo($_SESSION['Identifiant']);
+    ?>
+<?php include 'footer.view.html'; ?>
