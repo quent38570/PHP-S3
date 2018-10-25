@@ -29,21 +29,38 @@ class BilletDAO{
         return $resultats;
   }
 //------------------------------------------------------------------------------
-// function VerifIdMdp($ID, $MDP){
-//   // Vérifie que le couple d'ID/MDP correspond à un couple valide
-//
-//       // $utilisateurs contient les ID et MDP valides
-//       $utilisateurs=$this->RecupIdMdp();
-//
-//       // Parcour des ID et MDP valides
-//       foreach($utilisateurs as $users){
-//           // Si un couple d'ID/MDP correspondent, retourner VRAI
-//           if ($ID == $users['identifiant'] && $MDP == $users['motDePasse']){
-//             return true;
-//           }
-//       }
-//       // si on arrive ici --> aucune correspondance --> retourner FAUX
-//       return false;
-//   }
+function VerifIdMdp($ID){
+  // Vérifie que l'ID est déjà pris
+
+      // $utilisateurs contient les ID valides
+      $utilisateurs=$this->RecupIdMdp();
+
+      // Parcour des ID valides
+      foreach($utilisateurs as $users){
+          // Si un ID correspond, retourner VRAI
+          if ($ID == $users['identifiant']{
+            return true;
+          }
+      }
+      // si on arrive ici --> aucune correspondance --> retourner FAUX
+      return false;
+  }
+//------------------------------------------------------------------------------
+  function InsertNewUtilisateur($ID, $MDP){
+    // Insertion d'un nouveau utilisateur
+
+        // préparer la commande
+        $sql = 'INSERT INTO utilisateur VALUES (identifiant, motDePasse) VALUES (:id,:mdp) ;';
+        $stmt = $this->db->prepare($sql);
+
+        // Remplacement des variables
+        $stmt->bindValue(':id', $ID);
+        $stmt->bindValue(':mdp', $MDP);
+
+        // éxécuter la commande
+        $stmt->execute();
+
+  }
+//------------------------------------------------------------------------------
 }
  ?>
