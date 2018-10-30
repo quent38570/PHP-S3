@@ -22,12 +22,12 @@
   session_start();
   if(!isset($_SESSION['Identifiant'])){
      ?>
-    <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/connexion.view.php">
+    <a href="../controler/connexion.ctrl.php">
     <label for="Connexion"></label>
     <input type="button" id="Connexion" name="Connexion" value="Connexion">
     </a>
 
-    <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/inscription.view.php">
+    <a href="../controler/inscription.ctrl.php">
     <label for="Inscription"></label>
     <input type="button" id="Inscription" name="Inscription" value="Inscription"><br>
     </a>
@@ -37,9 +37,7 @@
     echo($_SESSION['Identifiant']);
       ?>
   <form action="../controler/deconnexion.ctrl.php" method="post">
-  <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/index.view.php">
   <input type="submit" value="Deconnexion" /><br>
-  </a>
  </form>
   <?php } ?>
 
