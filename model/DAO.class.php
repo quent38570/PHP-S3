@@ -29,22 +29,22 @@ class BilletDAO{
         return $resultats;
   }
 //------------------------------------------------------------------------------
-function VerifIdMdp($ID){
-  // Vérifie que l'ID est déjà pris
-
-      // $utilisateurs contient les ID valides
-      $utilisateurs=$this->RecupIdMdp();
-
-      // Parcour des ID valides
-      foreach($utilisateurs as $users){
-          // Si un ID correspond, retourner VRAI
-          if ($ID == $users['identifiant']{
-            return true;
-          }
-      }
-      // si on arrive ici --> aucune correspondance --> retourner FAUX
-      return false;
-  }
+// function VerifIdMdp($ID){
+//   // Vérifie que l'ID est déjà pris
+//
+//       // $utilisateurs contient les ID valides
+//       $utilisateurs=$this->RecupIdMdp();
+//
+//       // Parcour des ID valides
+//       foreach($utilisateurs as $users){
+//           // Si un ID correspond, retourner VRAI
+//           if ($ID == $users['identifiant']{
+//             return true;
+//           }
+//       }
+//       // si on arrive ici --> aucune correspondance --> retourner FAUX
+//       return false;
+//   }
 //------------------------------------------------------------------------------
   function InsertNewUtilisateur($ID, $MDP){
     // Insertion d'un nouveau utilisateur

@@ -7,6 +7,6 @@
 
 // Redirection sur la bonne page
     header("Location: ../view/index.view.php");
-}
+
 
  ?>
