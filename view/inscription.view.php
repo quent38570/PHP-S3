@@ -1,7 +1,7 @@
 <?php include 'header.view.php'; ?>
 
   <br>
-    <form action="../controler/connexion.ctrl.php" method="post">
+    <form action="../controler/inscription.ctrl.php" method="post">
       <label for="Identifiant">Identifiant: </label>
       <input type="text" id="Identifiant" name="Identifiant"><br>
 

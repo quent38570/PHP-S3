@@ -38,7 +38,7 @@ function VerifId($ID){
       // Parcour des ID valides
       foreach($utilisateurs as $users){
           // Si un ID correspond, retourner VRAI
-          if ($ID == $users['identifiant']{
+          if ($ID == $users['identifiant']){
             return true;
           }
       }
