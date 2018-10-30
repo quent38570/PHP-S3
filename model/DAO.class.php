@@ -33,7 +33,16 @@ function VerifId($ID){
   // Vérifie que l'ID est déjà pris
 
       // $utilisateurs contient les ID valides
-      $utilisateurs=$this->RecupIdMdp();
+      // préparer la commande
+      $sql = 'SELECT * FROM utilisateur WHERE identifiant = :id;';
+      $stmt = $this->db->prepare($sql);
+
+      // Remplacement des variables
+      $stmt->bindValue(':id', $ID);
+
+      // éxécuter la commande
+      $stmt->execute();
+      $utilisateurs=$stmt->fetchall();
 
       // Parcour des ID valides
       foreach($utilisateurs as $users){
