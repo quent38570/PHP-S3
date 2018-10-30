@@ -12,7 +12,7 @@ if (!empty($_POST['Identifiant']) || !empty($_POST['MotDePasse']) ) {
             require_once("../model/DAO.class.php");
             $dao = new BilletDAO();
             if (!($dao->VerifId($Identifiant))){
-              // Redirection sur le site en tant que connécté
+              // Redirection sur le site en tant que connecté
                   $dao->InsertNewUtilisateur($Identifiant, $MotDePasse);
 
 

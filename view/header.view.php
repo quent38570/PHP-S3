@@ -37,7 +37,7 @@
   }  else{
     echo($_SESSION['Identifiant']);
       ?>
-  <form action="../view/deconnexion.view.php" method="post">
+  <form action="../controler/deconnexion.ctrl.php" method="post">
   <input type="submit" value="Deconnexion" /><br>
  </form>
   <?php } ?>
