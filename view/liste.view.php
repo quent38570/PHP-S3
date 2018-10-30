@@ -41,7 +41,7 @@ foreach ($stocks as $stock) {
 <?php
 }
 ?>
-
+</form>
 <!---------------------------------------------------------------------------->
 
 <?php include 'footer.view.html'; ?>
