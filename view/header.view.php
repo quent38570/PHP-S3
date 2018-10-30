@@ -10,7 +10,8 @@
 
 <!--Barre de navigation -->
 <nav>
-  <a href="#">Concerts</a>
+  <a href="../controler/liste.ctrl.php">Tous les billets</a>
+  <a href="#">Concert</a>
   <a href="#">Spectacles</a>
   <a href="#">Sports</a>
   <a href="#">Informations</a>
@@ -22,12 +23,12 @@
   session_start();
   if(!isset($_SESSION['Identifiant'])){
      ?>
-    <a href="../controler/connexion.ctrl.php">
+    <a href="../view/connexion.view.php">
     <label for="Connexion"></label>
     <input type="button" id="Connexion" name="Connexion" value="Connexion">
     </a>
 
-    <a href="../controler/inscription.ctrl.php">
+    <a href="../view/inscription.view.php">
     <label for="Inscription"></label>
     <input type="button" id="Inscription" name="Inscription" value="Inscription"><br>
     </a>
@@ -36,7 +37,7 @@
   }  else{
     echo($_SESSION['Identifiant']);
       ?>
-  <form action="../controler/deconnexion.ctrl.php" method="post">
+  <form action="../view/deconnexion.view.php" method="post">
   <input type="submit" value="Deconnexion" /><br>
  </form>
   <?php } ?>
