@@ -11,9 +11,9 @@
 <!--Barre de navigation -->
 <nav>
   <a href="../controler/liste.ctrl.php">Tous les billets</a>
-  <a href="#">Concert</a>
-  <a href="#">Spectacles</a>
-  <a href="#">Sports</a>
+  <a href="../controler/listeconcert.ctrl.php">Concert</a>
+  <a href="../controler/listespectacle.ctrl.php">Spectacles</a>
+  <a href="../controler/listesport.ctrl.php">Sports</a>
   <a href="#">Informations</a>
 
 </nav>

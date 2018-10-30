@@ -88,6 +88,57 @@ function VerifId($ID){
         return $resultats;
   }
 //------------------------------------------------------------------------------
+function RecupListeConcertProduit(){
+  // Récupère les produits enregistrés
+
+      // préparer la commande
+      $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "concert";';
+      $stmt = $this->db->prepare($sql);
+
+      // éxécuter la commande
+      $stmt->execute();
+
+      // récupération des résultats
+      $resultats=$stmt->fetchall();
+
+      // Renvoie des résultats dans une variable
+      return $resultats;
+}
+//------------------------------------------------------------------------------
+function RecupListeSpectacleProduit(){
+  // Récupère les produits enregistrés
+
+      // préparer la commande
+      $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "spectacle";';
+      $stmt = $this->db->prepare($sql);
+
+      // éxécuter la commande
+      $stmt->execute();
+
+      // récupération des résultats
+      $resultats=$stmt->fetchall();
+
+      // Renvoie des résultats dans une variable
+      return $resultats;
+}
+//------------------------------------------------------------------------------
+function RecupListeSportProduit(){
+  // Récupère les produits enregistrés
+
+      // préparer la commande
+    $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "sport";';
+      $stmt = $this->db->prepare($sql);
+
+      // éxécuter la commande
+      $stmt->execute();
+
+      // récupération des résultats
+      $resultats=$stmt->fetchall();
+
+      // Renvoie des résultats dans une variable
+      return $resultats;
+}
+//------------------------------------------------------------------------------
   function RecupInfoProduit($idElement){
       // Récupère les infos d'un produit à l'aide de son identifiant
 
