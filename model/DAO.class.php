@@ -88,5 +88,25 @@ function VerifId($ID){
         return $resultats;
   }
 //------------------------------------------------------------------------------
+  function RecupInfoProduit($idElement){
+      // Récupère les infos d'un produit à l'aide de son identifiant
+
+          // préparer la commande
+          $sql = 'SELECT * FROM evenement WHERE idEvenement = :id;';
+          $stmt = $this->db->prepare($sql);
+
+          // Remplacement des variables
+          $stmt->bindValue(':id', $idElement);
+
+          // éxécuter la commande
+          $stmt->execute();
+
+          // récupération des résultats
+          $resultats=$stmt->fetchall();
+
+          // Renvoie des résultats dans une variable
+          return $resultats;
+  }
+//------------------------------------------------------------------------------
 }
  ?>
