@@ -5,9 +5,9 @@ require_once("../model/DAO.class.php");
 $dao = new BilletDAO();
 
 // On récupère le paramètre ID
-$idElement = $_POST['idElement'];
+$idEvement = $_POST['idEvement'];
 
-$stocks = ($dao -> RecupInfoProduit($idElement));
+$stocks = ($dao -> RecupInfoProduit($idEvement));
 
 require_once("../view/zoom.view.php");
 ?>
