@@ -9,7 +9,7 @@ foreach ($stocks as $stock) {
 
     <!-- Image du produit -->
     <div class="image">
-      <img src="../model/data/image/<?php echo $stock['image']; ?>.jpeg" alt="image">
+      <img src="../view/image/<?php echo $stock['image']; ?>.jpeg" alt="image">
     </div>
     <!-- titre du produit -->
     <div class="produit">
