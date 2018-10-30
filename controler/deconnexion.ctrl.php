@@ -1,14 +1,12 @@
 <?php
 
-// Sauvegarde de la deconnexion dans la variable globale SESSION
+// Réinitialisation de la variable globale SESSION puis destruction
     session_start();
-    $_SESSION['Identifiant'] = '';
-    $_SESSION['MotDePasse'] = '';
-    $_SESSION['ID'] = '';
-    echo($_SESSION['Identifiant']);
+    $_SESSION = array();
+    session_destroy();
 
 // Redirection sur la bonne page
-    require_once("../view/".$page.".view.php");
+    header("Location: ../view/index.view.php");
 }
 
  ?>

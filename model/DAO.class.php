@@ -62,5 +62,22 @@ function VerifIdMdp($ID){
 
   }
 //------------------------------------------------------------------------------
+  function RecupListeProduit(){
+    // Récupère les produits enregistrés
+
+        // préparer la commande
+        $sql = 'SELECT * FROM evenement;';
+        $stmt = $this->db->prepare($sql);
+
+        // éxécuter la commande
+        $stmt->execute();
+
+        // récupération des résultats
+        $resultats=$stmt->fetchall();
+
+        // Renvoie des résultats dans une variable
+        return $resultats;
+  }
+//------------------------------------------------------------------------------
 }
  ?>

@@ -17,23 +17,23 @@
 
 </nav>
 
-<nav>
+<div>
   <?php
   session_start();
   if(!isset($_SESSION['Identifiant'])){
-   ?>
-  <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/connexion.view.php">
-  <label for="Connexion"></label>
-  <input type="button" id="Connexion" name="Connexion" value="Connexion">
-  </a>
+     ?>
+    <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/connexion.view.php">
+    <label for="Connexion"></label>
+    <input type="button" id="Connexion" name="Connexion" value="Connexion">
+    </a>
 
-  <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/inscription.view.php">
-  <label for="Inscription"></label>
-  <input type="button" id="Inscription" name="Inscription" value="Inscription"><br>
-  </a>
-  <br>
-  <?php
-    }  else{
+    <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/inscription.view.php">
+    <label for="Inscription"></label>
+    <input type="button" id="Inscription" name="Inscription" value="Inscription"><br>
+    </a>
+    <br>
+    <?php
+  }  else{
     echo($_SESSION['Identifiant']);
       ?>
   <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/index.view.php">
@@ -42,4 +42,4 @@
   </a>
   <?php } ?>
 
-</nav>
+</div>
