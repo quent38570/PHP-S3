@@ -9,7 +9,7 @@ foreach ($stocks as $stock) {
 
     <!-- Image du produit -->
     <div class="image">
-      <img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/ <?php echo $stocks['image']; ?>.jpeg" alt="image">
+      <img src="../model/data/image/<?php echo $stock['image']; ?>.jpeg" alt="image">
     </div>
     <!-- titre du produit -->
     <div class="produit">
@@ -32,7 +32,9 @@ foreach ($stocks as $stock) {
     </div>
 
 </div>
-<?php}?>
+<?php
+}
+?>
 
 <!---------------------------------------------------------------------------->
 

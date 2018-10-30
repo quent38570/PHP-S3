@@ -59,7 +59,7 @@ function VerifId($ID){
     // Insertion d'un nouveau utilisateur
 
         // préparer la commande
-        $sql = 'INSERT INTO utilisateur VALUES (identifiant, motDePasse) VALUES (:id,:mdp) ;';
+        $sql = 'INSERT INTO utilisateur (identifiant, motDePasse) VALUES(:id,:mdp) ;';
         $stmt = $this->db->prepare($sql);
 
         // Remplacement des variables
