@@ -36,10 +36,11 @@
   }  else{
     echo($_SESSION['Identifiant']);
       ?>
+  <form action="../controler/deconnexion.ctrl.php" method="post">
   <a href="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/index.view.php">
-  <label for="Deconnexion"></label>
-  <input type="button" id="Deconnexion" name="Deconnexion" value="Deconnexion"><br>
+  <input type="submit" value="Deconnexion" /><br>
   </a>
+ </form>
   <?php } ?>
 
 </div>
