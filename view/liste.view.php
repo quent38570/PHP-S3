@@ -1,33 +1,34 @@
 
 <?php include 'header.view.php';
-require_once();
-foreach ($variable as $key => $value) {
+
+foreach ($stocks as $stock) {
   // code...
 ?>
 <div class="Element">
+  <?php $stock['idEvenement']; ?>
 
     <!-- Image du produit -->
     <div class="image">
-      <img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/IGottaFeeling.jpeg" alt="image">
+      <img src="http://www-etu-info.iut2.upmf-grenoble.fr/~sebags/ProgWeb/projet/view/image/ <?php echo $stocks['image']; ?>.jpeg" alt="image">
     </div>
     <!-- titre du produit -->
     <div class="produit">
-      <h3>I gotta feeling</h3>
+      <h3><?php echo $stock['nomEvenement']; ?></h3>
     </div>
 
     <!-- Dans le même lieux -->
     <div class="lieux">
-      <p>super showdown</p>
+      <p><?php echo $stock['lieu']; ?></p>
     </div>
 
     <!-- Avec le même artiste -->
-    <div class="artiste">
-      <p>The Black Eyed Peas</p>
+    <div class="nbBillet">
+      <p><?php echo $stock['nbBillet']; ?> billets restants</p>
     </div>
 
     <!-- Prix Billet -->
     <div class="prix">
-      <p>20€</p>
+      <p><?php echo $stock['prix']; ?> euros</p>
     </div>
 
 </div>

@@ -29,7 +29,7 @@ class BilletDAO{
         return $resultats;
   }
 //------------------------------------------------------------------------------
-function VerifIdMdp($ID){
+function VerifId($ID){
   // Vérifie que l'ID est déjà pris
 
       // $utilisateurs contient les ID valides
@@ -66,7 +66,7 @@ function VerifIdMdp($ID){
     // Récupère les produits enregistrés
 
         // préparer la commande
-        $sql = 'SELECT * FROM evenement;';
+        $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement;';
         $stmt = $this->db->prepare($sql);
 
         // éxécuter la commande
