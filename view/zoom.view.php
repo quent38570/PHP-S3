@@ -13,6 +13,10 @@
         <h3><?php echo $stocks[0]['nomEvenement']; ?></h3>
       </div>
 
+      <div class="libelle">
+        <p><?php echo $stocks[0]['libelle']; ?></p>
+      </div>
+
       <!-- Dans le même lieux -->
       <div class="lieux">
         <p><?php echo $stocks[0]['lieu']; ?></p>
