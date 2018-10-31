@@ -36,12 +36,14 @@ foreach ($stocks as $stock) {
     <div class="prix">
       <p>ID de l'article: <?php echo $stock['idEvenement']; ?></p>
     </div>
-    
+
     <input type="hidden" name="ID" value=<?php echo $stock['idEvenement'] ?> />
     <!-- Bouton En savoir plus -->
     <div class="savoir">
       <input type="submit" value="En savoir plus"/>
     </div>
+    <br>
+    <br>
 </div>
 </form>
 <?php

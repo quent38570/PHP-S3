@@ -10,6 +10,7 @@
 
 <!--Barre de navigation -->
 <nav>
+  <a href="../view/index.view.php">Accueil</a>
   <a href="../controler/liste.ctrl.php">Tous les billets</a>
   <a href="../controler/listeconcert.ctrl.php">Concert</a>
   <a href="../controler/listespectacle.ctrl.php">Spectacles</a>
