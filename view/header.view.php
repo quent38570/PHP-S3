@@ -19,7 +19,9 @@
 
 <div>
   <?php
-  session_start();
+  if(!(isset($_SESSION))){
+      session_start();
+  }
   if(!isset($_SESSION['Identifiant'])){
      ?>
     <a href="../view/connexion.view.php">
@@ -34,8 +36,7 @@
     <br>
     <?php
   }  else{
-    echo($_SESSION['Identifiant']);
-      ?>
+   ?> <p> Connecté en tant que: <?php  echo($_SESSION['Identifiant']);  ?></p>
   <form action="../controler/deconnexion.ctrl.php" method="post">
   <input type="submit" value="Deconnexion" /><br>
  </form>

@@ -1,8 +1,5 @@
 <?php
 
-// Récupération des variables
-$page = (isset($_POST['page'])) ? $_POST['page'] : "index" ;
-
 // Si donnée(s) érronée(s) alors on redirige vers la page de Connexion
 if (!empty($_POST['Identifiant']) || !empty($_POST['MotDePasse']) ) {
   $Identifiant = $_POST['Identifiant'] ;
@@ -22,7 +19,7 @@ if (!empty($_POST['Identifiant']) || !empty($_POST['MotDePasse']) ) {
                   $_SESSION['ID'] = $result[0]['idUtilisateur'];
 
 // Redirection sur la bonne page
-                  require_once("../view/".$page.".view.php");
+                  require_once("../view/index.view.php");
             }else {
               require_once("../view/connexion.view.php");
               echo "Mauvais Mot de Passe";
