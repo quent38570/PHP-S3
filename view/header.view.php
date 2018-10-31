@@ -14,8 +14,6 @@
   <a href="../controler/listeconcert.ctrl.php">Concert</a>
   <a href="../controler/listespectacle.ctrl.php">Spectacles</a>
   <a href="../controler/listesport.ctrl.php">Sports</a>
-  <a href="#">Informations</a>
-
 </nav>
 
 <div>

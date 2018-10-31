@@ -139,7 +139,7 @@ function RecupListeSportProduit(){
       return $resultats;
 }
 //------------------------------------------------------------------------------
-  function RecupInfoProduit($idElement){
+  function RecupInfoProduit($idEvenement){
       // Récupère les infos d'un produit à l'aide de son identifiant
 
           // préparer la commande
@@ -147,7 +147,7 @@ function RecupListeSportProduit(){
           $stmt = $this->db->prepare($sql);
 
           // Remplacement des variables
-          $stmt->bindValue(':id', $idElement);
+          $stmt->bindValue(':id', $idEvenement);
 
           // éxécuter la commande
           $stmt->execute();

@@ -1,10 +1,10 @@
-
 <?php include 'header.view.php';?>
-<form action="../controler/zoom.ctrl.php" method="post">
+
 <?php
 foreach ($stocks as $stock) {
   // code...
 ?>
+<form action="../controler/zoom.ctrl.php" method="post">
 <div class="Element">
   <?php $stock['idEvenement']; ?>
 
@@ -32,15 +32,16 @@ foreach ($stocks as $stock) {
       <p><?php echo $stock['prix']; ?> euros</p>
     </div>
 
-    <!-- Bouton Achat -->
-    <div class="achat">
-      <input type="submit" value="Acheter" />
+    <!-- Bouton En savoir plus -->
+    <div class="savoir">
+      <input type="submit" value="En savoir plus"/>
     </div>
 </div>
+</form>
 <?php
 }
 ?>
-</form>
+
 <!---------------------------------------------------------------------------->
 
 <?php include 'footer.view.html'; ?>
