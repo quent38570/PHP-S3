@@ -4,7 +4,7 @@
 foreach ($stocks as $stock) {
   // code...
 ?>
-<form action="../controler/zoom.ctrl.php" method="post">
+<form action="../controler/zoom.ctrl.php" method="POST">
 <div class="Element">
   <?php $stock['idEvenement']; ?>
 
@@ -37,6 +37,7 @@ foreach ($stocks as $stock) {
       <p>ID de l'article: <?php echo $stock['idEvenement']; ?></p>
     </div>
     
+    <input type="hidden" name="ID" value=<?php echo $stock['idEvenement'] ?> />
     <!-- Bouton En savoir plus -->
     <div class="savoir">
       <input type="submit" value="En savoir plus"/>
