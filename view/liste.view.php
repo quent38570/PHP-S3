@@ -32,6 +32,11 @@ foreach ($stocks as $stock) {
       <p><?php echo $stock['prix']; ?> euros</p>
     </div>
 
+    <!-- ID de l'article -->
+    <div class="prix">
+      <p>ID de l'article: <?php echo $stock['idEvenement']; ?></p>
+    </div>
+    
     <!-- Bouton En savoir plus -->
     <div class="savoir">
       <input type="submit" value="En savoir plus"/>
