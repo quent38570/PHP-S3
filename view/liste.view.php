@@ -1,6 +1,5 @@
 
-<?php include 'header.view.php';
-?>
+<?php include 'header.view.php';?>
 <form action="../controler/zoom.ctrl.php" method="post">
 <?php
 foreach ($stocks as $stock) {
