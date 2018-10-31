@@ -159,5 +159,23 @@ function RecupListeSportProduit(){
           return $resultats;
   }
 //------------------------------------------------------------------------------
+  function RecupListePanier($ID){
+    // Récupère les produits enregistrés
+
+        // préparer la commande
+        $sql = 'SELECT nomEvenement, panier.idEvenement, nbBilletAcheter FROM evenement, panier, utilisateur WHERE panier.idUtilisateur = :id and panier.idEvenement = evenement.idEvenement;';
+        $stmt = $this->db->prepare($sql);
+
+        $stmt->bindValue(':id', $ID);
+        // éxécuter la commande
+        $stmt->execute();
+
+        // récupération des résultats
+        $resultats=$stmt->fetchall();
+
+        // Renvoie des résultats dans une variable
+        return $resultats;
+ }
+//------------------------------------------------------------------------------
 }
  ?>
