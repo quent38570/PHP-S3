@@ -40,6 +40,12 @@
   <form action="../controler/deconnexion.ctrl.php" method="post">
   <input type="submit" value="Deconnexion" /><br>
  </form>
+ <form action="../controler/profil.ctrl.php" method="post">
+ <input type="submit" value="Mon profil" /><br>
+</form>
+<form action="../controler/panier.ctrl.php" method="post">
+<input type="submit" value="Mon panier" /><br>
+</form>
   <?php } ?>
 
 </div>

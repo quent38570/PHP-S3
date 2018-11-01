@@ -1,5 +1,5 @@
 <?php include 'header.view.php'; ?>
-<form action="../controler/panier.ctrl.php" method="post">
+<form action="../controler/achat.ctrl.php" method="post">
 
   <div class="Element">
     <?php $stocks[0]['idEvenement']; ?>

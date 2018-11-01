@@ -16,7 +16,7 @@ CREATE TABLE evenement (
   moment DATE,
   nbBillet INT,
   prix REAL
-  );
+);
 
 DROP TABLE IF EXISTS [utilisateur]; -- "OR REPLACE"
 CREATE TABLE utilisateur (
