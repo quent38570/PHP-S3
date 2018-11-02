@@ -1,7 +1,7 @@
 <?php include 'header.view.php'; ?>
 
 <h3>Mon panier</h3>
-
+<?php //var_dump($stocks); ?>
 <table>
 <tr>
   <td>nomEvenement</td>
