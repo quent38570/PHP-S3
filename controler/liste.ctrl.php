@@ -3,7 +3,7 @@
 <?php
 require_once("../model/DAO.class.php");
 $dao = new BilletDAO();
-$stocks = ($dao -> RecupListeProduit());
+$stocks = ($dao -> RecupListeProduitDisponible());
 
 require_once("../view/liste.view.php");
 ?>

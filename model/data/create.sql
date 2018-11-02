@@ -29,5 +29,6 @@ DROP TABLE IF EXISTS [panier]; -- "OR REPLACE"
 CREATE TABLE panier (
   idEvenement INTEGER REFERENCES evenenment(idEvenement),
   idUtilisateur INTEGER REFERENCES utilisateur(idUtilisateur),
-  nbBilletAcheter INT
+  nbBilletAcheter INT,
+  CONSTRAINT PRIMARY KEY(idEvenenement, idUtilisateur)
 );

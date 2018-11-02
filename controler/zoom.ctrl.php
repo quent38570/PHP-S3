@@ -1,12 +1,18 @@
 
 <!-- Demande à la base de données  -->
 <?php
-require_once("../model/DAO.class.php");
-$dao = new BilletDAO();
+if(!(isset($_POST['ID']))){
 
-// On récupère le paramètre ID
-$idEvenement = $_POST['ID'];
-$stocks = ($dao -> RecupInfoProduit($idEvenement));
+  require_once("../view/index.view.php");
+}else{
 
-require_once("../view/zoom.view.php");
+    require_once("../model/DAO.class.php");
+    $dao = new BilletDAO();
+
+    // On récupère le paramètre ID
+    $idEvenement = $_POST['ID'];
+    $stocks = ($dao -> RecupInfoProduit($idEvenement));
+
+    require_once("../view/zoom.view.php");
+}
 ?>

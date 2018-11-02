@@ -1,14 +1,26 @@
 <?php
+if (isset($_SESSION)) {
+  $idUtilisateur = $_SESSION['ID'];
+}else {
+  session_start();
+  if (isset($_SESSION['ID'])) {
+    $idUtilisateur = $_SESSION['ID'];
+  }else{
+    $idUtilisateur = NULL;
+  }
+}
+if ($idUtilisateur == NULL) {
+  require_once("../view/connexion.view.php");
+}else{
 
-// Traitement des variables
-$ID = (isset($_SESSION)) ? $_SESSION['ID'] : session_start(); $_SESSION['ID'] ;
 
+    // Demande de récupération des informations du profil
+    require_once("../model/DAO.class.php");
+    $dao = new BilletDAO();
 
-// Demande de récupération des informations du profil
-require_once("../model/DAO.class.php");
-$dao = new BilletDAO();
-$result = $dao->RecupInfoProfil($ID);
+    $result = $dao->RecupInfoProfil($idUtilisateur);
 
-// Redirection
-require_once("../view/profil.view.php");
+    // Redirection
+    require_once("../view/profil.view.php");
+}
  ?>

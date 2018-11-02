@@ -87,12 +87,29 @@ function VerifId($ID){
         // Renvoie des résultats dans une variable
         return $resultats;
   }
+  //------------------------------------------------------------------------------
+    function RecupListeProduitDisponible(){
+      // Récupère les produits enregistrés
+
+          // préparer la commande
+          $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE nbBillet > 0;';
+          $stmt = $this->db->prepare($sql);
+
+          // éxécuter la commande
+          $stmt->execute();
+
+          // récupération des résultats
+          $resultats=$stmt->fetchall();
+
+          // Renvoie des résultats dans une variable
+          return $resultats;
+    }
 //------------------------------------------------------------------------------
 function RecupListeConcertProduit(){
   // Récupère les produits enregistrés
 
       // préparer la commande
-      $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "concert";';
+      $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "concert" AND nbBillet > 0;';
       $stmt = $this->db->prepare($sql);
 
       // éxécuter la commande
@@ -109,7 +126,7 @@ function RecupListeSpectacleProduit(){
   // Récupère les produits enregistrés
 
       // préparer la commande
-      $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "spectacle";';
+      $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "spectacle" AND nbBillet > 0;';
       $stmt = $this->db->prepare($sql);
 
       // éxécuter la commande
@@ -126,7 +143,7 @@ function RecupListeSportProduit(){
   // Récupère les produits enregistrés
 
       // préparer la commande
-    $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "sport";';
+    $sql = 'SELECT idEvenement, image, nomEvenement, lieu, nbBillet, prix FROM evenement WHERE type = "sport" AND nbBillet > 0;';
       $stmt = $this->db->prepare($sql);
 
       // éxécuter la commande
@@ -163,7 +180,7 @@ function RecupListeSportProduit(){
     // Récupère les produits enregistrés
 
         // préparer la commande
-        $sql = 'SELECT nomEvenement, panier.idEvenement, nbBilletAcheter, prix FROM evenement, panier, utilisateur WHERE panier.idUtilisateur = :id and panier.idEvenement = evenement.idEvenement;';
+        $sql = 'SELECT nomEvenement, panier.idEvenement, nbBilletAcheter, prix FROM evenement, panier WHERE panier.idUtilisateur = :id AND panier.idEvenement = evenement.idEvenement;';
         $stmt = $this->db->prepare($sql);
 
         $stmt->bindValue(':id', $ID);
@@ -185,6 +202,7 @@ function RecupListeSportProduit(){
         $stmt = $this->db->prepare($sql);
 
         $stmt->bindValue(':id', $ID);
+
         // éxécuter la commande
         $stmt->execute();
 
@@ -199,24 +217,17 @@ function VerifAchat($idEvenement,$idUtilisateur){
   // Vérifie que l'ID est déjà présent dans le panier
 
   // préparer la commande
-  $sql = 'SELECT idEvenement FROM panier WHERE idUtilisateur = :idUtilisateur;';
+  $sql = 'SELECT idEvenement FROM panier WHERE idUtilisateur = :idUtilisateur AND idEvenement = :idEvnement;';
   $stmt = $this->db->prepare($sql);
 
   $stmt->bindValue(':idUtilisateur', $idUtilisateur);
+  $stmt->bindValue(':idEvnement', $idEvenement);
 
       // éxécuter la commande
       $stmt->execute();
-      $utilisateurs=$stmt->fetchall();
+      $ids=$stmt->fetchall();
+      return !(empty($ids));
 
-      // Parcour le panier du client
-      foreach($utilisateurs as $users){
-          // Si un ID correspond, retourner VRAI
-          if ($users == $idEvenement){
-            return true;
-          }
-      }
-      // si on arrive ici --> aucune correspondance --> retourner FAUX
-      return false;
 }
 //------------------------------------------------------------------------------
 function UpdatePanier($idEvenement,$idUtilisateur){

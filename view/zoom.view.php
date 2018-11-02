@@ -2,7 +2,6 @@
 <form action="../controler/achat.ctrl.php" method="post">
 
   <div class="Element">
-    <?php $stocks[0]['idEvenement']; ?>
 
       <!-- Image du produit -->
       <div class="image">
@@ -36,6 +35,7 @@
       <div class="achat">
          <input type="submit" value="Acheter" />
        </div>
+      <input type="hidden" name="idEvenement" value=<?php echo $stocks[0]['idEvenement'] ?> />
   </div>
 
 </form>
