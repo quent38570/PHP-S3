@@ -2,6 +2,6 @@
 require_once('DAO.class.php');
 
 $dao = new BilletDAO();
-$a = $dao->RecupListePanier('visiteur');
+$a = $dao->RecupListePanier(1);
 var_dump($a);
  ?>
