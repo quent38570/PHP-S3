@@ -10,7 +10,7 @@ foreach ($stocks as $stock) {
 
     <!-- Image du produit -->
     <div class="image">
-      <img src="../view/image/<?php echo $stock['image']; ?>.jpeg" alt="image">
+      <img src="../view/image/<?php echo $stock['image']; ?>" alt="image">
     </div>
     <!-- titre du produit -->
     <div class="produit">
@@ -38,7 +38,7 @@ foreach ($stocks as $stock) {
     </div>
 
     <input type="hidden" name="ID" value=<?php echo $stock['idEvenement'] ?> />
-    
+
     <!-- Bouton En savoir plus -->
     <div class="savoir">
       <input type="submit" value="En savoir plus"/>

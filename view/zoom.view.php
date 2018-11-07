@@ -5,7 +5,7 @@
 
       <!-- Image du produit -->
       <div class="image">
-        <img src="../view/image/<?php echo $stocks[0]['image']; ?>.jpeg" alt="image">
+        <img src="../view/image/<?php echo $stocks[0]['image']; ?>" alt="image">
       </div>
       <!-- titre du produit -->
       <div class="produit">
