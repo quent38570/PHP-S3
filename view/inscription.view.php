@@ -6,7 +6,7 @@
       <input type="text" id="Identifiant" name="Identifiant"><br>
 
       <label for="MotDePasse">MotDePasse: </label>
-      <input type="text" id="MotDePasse" name="MotDePasse"><br>
+      <input type="password" id="MotDePasse" name="MotDePasse"><br>
 
     	<input type="submit" value="Inscription" />
     </form>
