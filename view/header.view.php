@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../Style/master.css">
     <title>E-Billet</title>
   </head>
   <body>
@@ -10,14 +11,16 @@
 
 <!--Barre de navigation -->
 <nav>
-  <a href="../view/index.view.php">Accueil</a>
-  <a href="../controler/liste.ctrl.php">Tous les billets</a>
-  <a href="../controler/listeconcert.ctrl.php">Concert</a>
-  <a href="../controler/listespectacle.ctrl.php">Spectacles</a>
-  <a href="../controler/listesport.ctrl.php">Sports</a>
+  <ul>
+    <li><a href="../view/index.view.php">Accueil</a></li>
+    <li><a href="../controler/liste.ctrl.php">Tous les billets</a></li>
+    <li><a href="../controler/listeconcert.ctrl.php">Concert</a></li>
+    <li><a href="../controler/listespectacle.ctrl.php">Spectacles</a></li>
+    <li><a href="../controler/listesport.ctrl.php">Sports</a></li>
+  </ul>
 </nav>
 
-<div>
+<div id="connexion">
   <?php
   if(!(isset($_SESSION))){
       session_start();
@@ -26,25 +29,25 @@
      ?>
     <a href="../view/connexion.view.php">
     <label for="Connexion"></label>
-    <input type="button" id="Connexion" name="Connexion" value="Connexion">
+    <input class="button" type="button" id="Connexion" name="Connexion" value="Connexion">
     </a>
 
     <a href="../view/inscription.view.php">
     <label for="Inscription"></label>
-    <input type="button" id="Inscription" name="Inscription" value="Inscription"><br>
+    <input  class="button" type="button" id="Inscription" name="Inscription" value="Inscription"><br>
     </a>
     <br>
     <?php
   }  else{
    ?> <p> Connecté en tant que: <?php  echo($_SESSION['Identifiant']);  ?></p>
   <form action="../controler/deconnexion.ctrl.php" method="post">
-  <input type="submit" value="Deconnexion" /><br>
+  <input  class="button" type="submit" value="Deconnexion" /><br>
  </form>
  <form action="../controler/profil.ctrl.php" method="post">
- <input type="submit" value="Mon profil" /><br>
+ <input  class="button" type="submit" value="Mon profil" /><br>
 </form>
 <form action="../controler/panier.ctrl.php" method="post">
-<input type="submit" value="Mon panier" /><br>
+<input class="button" type="submit" value="Mon panier" /><br>
 </form>
   <?php } ?>
 
