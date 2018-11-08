@@ -1,6 +1,4 @@
 INSERT INTO utilisateur (identifiant, motDePasse) VALUES ('visiteur','visiteur');
-INSERT INTO utilisateur (identifiant, motDePasse) VALUES ('salut','salut');
-INSERT INTO utilisateur (identifiant, motDePasse) VALUES ('azerty','azerty');
 
 INSERT INTO lieux VALUES ('Stade Des Alpes','1 Avenue de Valmy ,38000 Grenoble','www.stadedesalpes.fr');
 INSERT INTO lieux VALUES ('Patinoire Polesud','1 Avenue d Innsbruck ,38100 Grenoble','www.patinoirepolesud.fr');
@@ -27,6 +25,3 @@ INSERT INTO evenement (nomEvenement,type,libelle,image,lieu,moment,nbBillet,prix
 INSERT INTO evenement (nomEvenement,type,libelle,image,lieu,moment,nbBillet,prix) VALUES ('FC GRENOBLE/AGEN (Rugby)','sport','Match comptant pour le challenge européen','fcg.png','Stade des alpes','07/12/2018',15,12.5);
 
 INSERT INTO panier VALUES (1,1,1);
-INSERT INTO panier VALUES (2,2,1);
-INSERT INTO panier VALUES (4,3,4);
-INSERT INTO panier VALUES (3,3,2);
