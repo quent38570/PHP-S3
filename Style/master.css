@@ -23,6 +23,7 @@ h1, h2 {
  font-size: 200%;
  color: navy;
  }
+
 nav{
   background-color: #333;
 }
@@ -51,6 +52,13 @@ nav{
 
  li a:hover {
      background-color: #111;
+ }
+
+ footer {
+   background-color: black;
+   color: white;
+   padding-top: 10px;
+   padding-bottom: 10px;
  }
 
  /* Pour les boutons */

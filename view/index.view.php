@@ -1,6 +1,17 @@
 
 <?php include 'header.view.php'; ?>
 
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Style/master2.css">
+    <title></title>
+  </head>
+  <body>
+
+
+
 <!-- Dernières Minutes -->
     <div>
       <h3>Concert</h3>
@@ -24,5 +35,8 @@
       <a href="../controler/listesport.ctrl.php"><img src="../view/image/fcg.png" alt="image" ></img></a>
       <a href="../controler/listesport.ctrl.php"><img src="../view/image/gf38.png" alt="image" ></img></a>
     </div>
+
+  </body>
+</html>
 
 <?php include 'footer.view.html'; ?>

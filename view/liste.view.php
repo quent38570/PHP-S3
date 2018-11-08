@@ -1,5 +1,13 @@
 <?php include 'header.view.php';?>
 
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Style/master2.css">
+    <title></title>
+  </head>
+  <body>
+
 <?php
 foreach ($stocks as $stock) {
   // code...
@@ -10,7 +18,7 @@ foreach ($stocks as $stock) {
 
     <!-- Image du produit -->
     <div class="image">
-      <img src="../view/image/<?php echo $stock['image']; ?>" alt="image">
+      <img src="../view/image/<?php echo $stock['image']; ?>" alt="image" width="250px" height="250px">
     </div>
     <!-- titre du produit -->
     <div class="produit">
@@ -41,7 +49,7 @@ foreach ($stocks as $stock) {
 
     <!-- Bouton En savoir plus -->
     <div class="savoir">
-      <input type="submit" value="En savoir plus"/>
+      <input class="button" type="submit" value="En savoir plus" style="width:130px"/>
     </div>
     <br>
     <br>
@@ -52,5 +60,6 @@ foreach ($stocks as $stock) {
 ?>
 
 <!---------------------------------------------------------------------------->
-
+</body>
+</html>
 <?php include 'footer.view.html'; ?>

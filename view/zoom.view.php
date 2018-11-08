@@ -1,4 +1,13 @@
 <?php include 'header.view.php'; ?>
+
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Style/master2.css">
+    <title></title>
+  </head>
+  <body>
+
 <form action="../controler/achat.ctrl.php" method="post">
 
   <div class="Element">
@@ -33,10 +42,13 @@
 
       <!-- Bouton Achat -->
       <div class="achat">
-         <input type="submit" value="Acheter" />
+         <input class="button" type="submit" value="Acheter" style="width:130px"/>
        </div>
+
       <input type="hidden" name="idEvenement" value=<?php echo $stocks[0]['idEvenement'] ?> />
   </div>
 
 </form>
+</body>
+</html>
 <?php include 'footer.view.html'; ?>

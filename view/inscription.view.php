@@ -1,14 +1,25 @@
 <?php include 'header.view.php'; ?>
 
-  <br>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Style/master2.css">
+    <title></title>
+  </head>
+  <body>
+
     <form action="../controler/inscription.ctrl.php" method="post">
       <label for="Identifiant">Identifiant: </label>
       <input type="text" id="Identifiant" name="Identifiant"><br>
 
       <label for="MotDePasse">MotDePasse: </label>
-      <input type="password" id="MotDePasse" name="MotDePasse"><br>
+      <input class="textfield" type="password" id="MotDePasse" name="MotDePasse"><br>
 
-    	<input type="submit" value="Inscription" />
+    	<input class="button" type="submit" value="Inscription" style="width:130px"/>
     </form>
+
+  </body>
+</html>
 
 <?php include 'footer.view.html'; ?>

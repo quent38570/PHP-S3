@@ -29,25 +29,25 @@
      ?>
     <a href="../view/connexion.view.php">
     <label for="Connexion"></label>
-    <input class="button" type="button" id="Connexion" name="Connexion" value="Connexion">
+    <input class="button" type="button" id="Connexion" name="Connexion" value="Connexion" style="width:130px">
     </a>
 
     <a href="../view/inscription.view.php">
     <label for="Inscription"></label>
-    <input  class="button" type="button" id="Inscription" name="Inscription" value="Inscription"><br>
+    <input  class="button" type="button" id="Inscription" name="Inscription" value="Inscription" style="width:130px"><br>
     </a>
     <br>
     <?php
   }  else{
    ?> <p> Connecté en tant que: <?php  echo($_SESSION['Identifiant']);  ?></p>
   <form action="../controler/deconnexion.ctrl.php" method="post">
-  <input  class="button" type="submit" value="Deconnexion" /><br>
+  <input  class="button" type="submit" value="Deconnexion" style="width:130px"/><br>
  </form>
  <form action="../controler/profil.ctrl.php" method="post">
- <input  class="button" type="submit" value="Mon profil" /><br>
+ <input  class="button" type="submit" value="Mon profil" style="width:130px"/><br>
 </form>
 <form action="../controler/panier.ctrl.php" method="post">
-<input class="button" type="submit" value="Mon panier" /><br>
+<input class="button" type="submit" value="Mon panier" style="width:130px"/><br>
 </form>
   <?php } ?>
 
