@@ -10,7 +10,7 @@
 
 <h3>Mon panier</h3>
 
-<table>
+<table id="panier">
 <tr>
   <td>nomEvenement</td>
   <td>idEvenement</td>
